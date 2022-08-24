@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+div {
+  height: 6.25rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 100%;
+  border: 0.1875rem solid red;
+  flex-direction: column;
+}
+div h1, div h2 {
+  color: green;
+}
+div h2 {
+  padding: 1rem;
+  border: 1px solid red;
+}
+div section {
+  height: 6.25rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div section article {
+  color: red;
+  border: 0.1875rem solid green;
+  font-size: 1rem;
+  text-align: center;
+  width: 22%;
+}
+div section article:nth-of-type(odd) {
+  color: blue;
+}
+div footer {
+  height: 6.25rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div footer article {
+  color: green;
+  border: 0.1875rem solid blue;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 22%;
+  height: 6.25rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+/*# sourceMappingURL=style.css.map */

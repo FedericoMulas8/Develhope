@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin bounce($start, $travel) {
+
+    @keyframes bounced {
+        0% {transform: translateY($start);}
+        40% {transform: translateY($travel);}
+        60% {transform: translateY(calc($travel/2));}
+    }
+
+}
+
+@include bounce(0px, -30px);
+
+.bounce {
+    width: 20rem;
+    height: 20rem;
+    background-color: red;
+    animation-name: bounced;
+    animation-duration: 1s;
+}

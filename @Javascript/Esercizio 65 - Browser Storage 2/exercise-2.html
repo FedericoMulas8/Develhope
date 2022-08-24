@@ -1,0 +1,36 @@
+<html>
+  <body>
+    <div id="container">
+      <button type="button" id="fetch-post">
+        Fetch Post from LocalStorage
+      </button>
+
+      <h2>Post: <span id="post-title"></span></h2>
+    </div>
+  </body>
+</html>
+
+<script>
+
+
+  let url = "https://jsonplaceholder.typicode.com/posts/1";
+  let localBtn = document.querySelector("#fetch-post")
+  let span = document.querySelector("#post-title");
+
+  function local() {
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then(response => response.json())
+    .then(post => localStorage.setItem('post', JSON.stringify(post)))
+    .catch(e => console.log(e))
+  }
+
+  function addPost() {
+    const local = localStorage.getItem("post");
+    span.innerText = local;
+  }
+
+  // localBtn.addEventListener("click", local);
+  localBtn.addEventListener("click", addPost);
+
+
+</script>

@@ -1,0 +1,7 @@
+//Creare poi un modulo con una funzione che trasformi i px in rem, quindi che accetti come parametro un numero e restituisca il valore relativo in rem.
+//Consideriamo che 1rem = 16px.
+
+@function calcolo($pixel) {
+    $rem-size: calc($pixel / 16) * 1rem; 
+    @return $rem-size;
+}

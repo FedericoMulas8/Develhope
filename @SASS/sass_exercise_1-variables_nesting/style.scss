@@ -1,0 +1,33 @@
+$blu: blue;
+$red: red;
+$green: green;
+
+div {
+    border: 3px solid $green;
+    width: 100vw;
+
+    h1 {
+        color: $green;
+    }
+
+    section {
+
+        width:90%;
+    
+        article {
+            border: 3px solid $green;
+            width: 20%;
+        }
+
+        article:nth-of-type(odd) {
+            color: $blu;
+        }
+
+        article:nth-of-type(even) {
+            color: $red;
+        }
+    }
+
+}
+
+

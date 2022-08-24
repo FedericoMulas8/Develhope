@@ -1,0 +1,43 @@
+@function random-hex2() {
+
+        $hex1: random(15);
+        $hex2: random(15);
+        $hex3: random(15);
+        $hex4: random(15);
+        $hex5: random(15);
+        $hex6: random(15);
+        $hex: #{'#'}+#{$hex1}+#{$hex2}+#{$hex3}+#{$hex4}+#{$hex5}+#{$hex6};
+
+        @if $hex == 10 {
+            $hex: A;
+        }
+    
+        @else if $hex == 11 {
+            $hex: B;
+        }
+    
+        @else if $hex == 12 {
+            $hex: C;
+        }
+    
+        @else if $hex == 13 {
+            $hex: D;
+        }
+    
+        @else if $hex == 14 {
+            $hex: E;
+        }
+    
+        @else if $hex == 15 {
+            $hex: F;
+        }
+    
+        @else {
+    
+            @return $hex;
+    
+        }
+
+
+    @return $hex;
+}

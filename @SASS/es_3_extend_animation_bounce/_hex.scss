@@ -1,0 +1,44 @@
+@use 'sass:math';
+
+@function random-hex(){
+
+    $hex: #{'#'};
+
+    @for $i from 1 through 6{
+
+       $rand: random(15);
+
+        @if $rand == 10{
+                $rand: A;
+                $hex: $hex + $rand;
+            }
+
+        @else if $rand == 11{
+                $rand: B;
+                $hex: $hex + $rand;
+            }
+            
+        @else if $rand == 12{
+                $rand: C;
+                $hex: $hex + $rand;
+            }
+        @else if $rand == 13{
+                $rand: D;
+                $hex: $hex + $rand;
+            }
+        @else if $rand == 14{
+                $rand: E;
+                $hex: $hex + $rand;
+            }
+        @else if $rand == 15{
+                $rand: F;
+                $hex: $hex + $rand;
+            }
+
+        @else {
+                $hex: $hex + $rand;
+            }
+        }
+
+    @return $hex;
+}

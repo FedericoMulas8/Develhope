@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.bg-random, .container .bounce {
+  background-color: #BA92A6;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .bounce {
+  width: 20rem;
+  height: 20rem;
+  animation-name: bounced;
+  animation-duration: 1s;
+  border-radius: 50%;
+}
+
+@keyframes bounced {
+  0% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

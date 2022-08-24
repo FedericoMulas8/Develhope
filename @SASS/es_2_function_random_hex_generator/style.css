@@ -1,0 +1,30 @@
+.numero {
+  color: #5B65F7;
+}
+
+.container .uno,
+.container .due,
+.container .tre,
+.container .quattro,
+.container .cinque {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+.container div:nth-child(1) {
+  background-color: #AB3695;
+}
+.container div:nth-child(2) {
+  background-color: #CBE448;
+}
+.container div:nth-child(3) {
+  background-color: #C92E58;
+}
+.container div:nth-child(4) {
+  background-color: #55C868;
+}
+.container div:nth-child(5) {
+  background-color: #C1AC74;
+}
+
+/*# sourceMappingURL=style.css.map */

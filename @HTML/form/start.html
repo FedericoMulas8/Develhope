@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Lezione HTML</title>
+	<style>
+		label {
+			display: block
+		}
+	</style>
+</head>
+
+
+<body>
+	<form action="indirizzo.it/" method="get">
+		<fieldset>
+
+			<legend><h1>Registrazione</h1></legend>
+
+			<!--Dati Iniziali-->
+			<section>
+			<fieldset>
+				<legend>I tuoi dati:</legend>
+			<div>
+				<label for="usermail">Indirizzo e-mail:</label>
+				<input type="email" name="usermail" id="usermail" placeholder="Inserisci la tua Email">
+				
+			</div>	
+			<div>
+				<label for="pass">Password:</label>
+				<input type="password" name="pass" id="pass" placeholder="Inserisci la password">
+				
+			</div>
+			<div>
+				<label for="dati"><span>Nome & Cognome:</span></label>
+				<input type="text" name="dati" id="dati" placeholder="Il tuo nome e cognome">
+				
+			</div>
+			<div>
+				<label for="datanascita">Data di nascita:</label>
+				<input type="date" name="datanascita" id="datanascita">
+			</div>
+			<div>
+				<label for="numtel">Numero di telefono:</label>
+				<input type="tel" name="numtel" id="numtel" placeholder="Il tuo numero di telefono">
+			</div>
+			</fieldset>
+			</section>
+
+			<!-- Piano di Abbonamento 2 -->
+			<div>
+				<label for="piano">Piano di abbonamento</label>
+				<select id="piano" name="piano1" required>
+					<option value="0">Piano Free</option>
+					<optgroup label="Piani Premium">
+						<option value="1">9.99€/mese</option>
+						<option value="2">19.99€/mese</option>
+						<option value="3">39.99€/mese</option>
+					</optgroup>
+				</select>
+				<label for="pianopro"><strong>Vuoi aggiungere i benefici "PRO"?</strong></label>
+				<input id="pianopro" name="piano2" type="checkbox" required/>
+			</div>
+			
+			<!--Carta di Credito-->
+			<div>
+				<fieldset>
+					<legend><strong>Carta di Credito:</strong></legend>
+					<div>
+						<label for="numcard">Carta di Credito:</label>
+						<input type="tel" name="numcard" id="numcard" maxlength="16" placeholder="XXXX-XXXX-XXXX-XXXX" pattern="[0-9]{16}" inputmode="numeric">
+						
+					</div>
+					<div>
+						<label for="cvc">CVC:</label>
+						<input type="tel" name="cvc" id="cvc" placeholder="XXX" maxlength="3" pattern="[0-9]{3}" inputmode="numeric">
+					</div>
+					<div>
+						<label for="scad">Data di Scadenza:</label>
+						<input type="date">
+					</div>
+				</fieldset>
+			</div>
+
+			<!--Indirizzo di fatturazione-->
+			<div>
+				<fieldset>
+					<legend><strong>Indirizzo di Fatturazione:</strong></legend>
+					<div>
+						<label for="via">Via:</label>
+						<input type="text" name="via" id="via" placeholder="Inserisci la via/piazza..">
+						<label for="cap">CAP:</label>
+						<input type="tel" name="cap" id="cap" maxlength="5" placeholder="Inserisci il tuo CAP">	
+						<label for="stato">Stato:</label>
+							<select name="stato" id="stato">
+								<option value="stato">Italia</option>
+							</select>
+					</div>
+				</fieldset>
+			</div>
+
+		</fieldset>
+
+		<input type="submit">
+	</form>
+
+
+</body>
+
+</html>

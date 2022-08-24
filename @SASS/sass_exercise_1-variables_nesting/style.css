@@ -1,0 +1,22 @@
+div {
+  border: 3px solid green;
+  width: 100vw;
+}
+div h1 {
+  color: green;
+}
+div section {
+  width: 90%;
+}
+div section article {
+  border: 3px solid green;
+  width: 20%;
+}
+div section article:nth-of-type(odd) {
+  color: blue;
+}
+div section article:nth-of-type(even) {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,40 @@
+<html>
+  <body>
+    <div id="container">
+      <form>
+        <div>
+          <label>First Name:</label>
+          <input type="text" class="form-input" id="firstName" value="Mario"/>
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type="text" class="form-input" id="lastName" value="Rossi"/>
+        </div>
+        <div>
+          <label>Age:</label>
+          <input type="number" class="form-input" id="age" value="25"/>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+
+  labelName = document.querySelectorAll('label');
+  formInput = document.querySelectorAll('.form-input');
+
+  for (i = 0; i < formInput.length; i++) {
+    console.log(`${labelName[i].innerText} ${formInput[i].value}`)
+  }
+
+</script>
+
+# Dom Tree - Exercise 3
+Implementare il codice necessario per recuperare il valore di ciascun campo di input e della corrispettiva label associata.
+In console occorrerà stampare il seguente risultato:
+```
+First Name: Mario
+Last Name: Rossi
+Age: 25
+```

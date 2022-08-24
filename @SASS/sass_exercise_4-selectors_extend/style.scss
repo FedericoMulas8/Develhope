@@ -1,0 +1,72 @@
+@import "underscore/variabili";
+@import 'underscore/funzione';
+
+@mixin layout($color,$bordercolor, $fontsize) {
+    color: $color;
+    border: calcolo(3) solid $bordercolor;
+    font-size: $fontsize;
+    text-align: center;
+    width: 22%;
+}
+
+@mixin flex-content {
+    height: calcolo(100);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+div {
+    @include flex-content();
+    height: 50%;
+    width: 100%;
+    border: calcolo(3) solid $red;
+    flex-direction: column;
+
+    h1 {
+        color: $green;
+    }
+
+    h2 {
+        @extend h1;
+        padding: 1rem;
+        border: 1px solid red;
+    }
+    
+    section {
+    
+        @include flex-content();
+    
+        article {
+            @include layout($red, $green, 1rem);
+        
+            &:nth-of-type(odd) {
+                color: $blue;
+            }
+        }
+
+    }
+
+    footer {
+    
+        @include flex-content();
+    
+        article {
+            @include layout($green, $blue, 1.5rem);
+            @include flex-content();
+            width: 80%;
+        }
+    }
+}
